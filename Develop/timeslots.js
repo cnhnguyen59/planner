@@ -1,4 +1,6 @@
-var timeSlots = [
+//Stores data in local storage
+
+var hours = [
     { 
         "time": "8:00 am",
         "hour": "08",
@@ -45,3 +47,12 @@ var timeSlots = [
         "text": ""
     },  
 ]
+
+if(localStorage.getItem('timeSlots') == null){
+    localStorage.setItem('timeSlots', JSON.stringify(hours))
+    var timeSlots = JSON.parse(localStorage.getItem('timeSlots'))
+} else {
+    var timeSlots = JSON.parse(localStorage.getItem('timeSlots'))
+}
+
+
