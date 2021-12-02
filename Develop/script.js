@@ -26,9 +26,7 @@ timeSlots.forEach((timeSlot, i) => {
     }
 )
 
-$('.container').html(
-    output 
-)
+$('.container').html(output)
 
 //Saves tasks in text area
 $('.row').on('click', 'button', (event)=>{
